@@ -42,7 +42,7 @@ pub fn run_1() {
 
 pub fn run_2() {
     let all_plays: Vec<String> =
-        utils::read_file_lines("C:\\Development\\VSCode\\rust\\aventus\\data\\day_2_1.txt");
+        utils::read_file_lines("./data/day_2_1.txt");
     let abc_start: isize = -64;
     let xyz_start: isize = -88;
     let mut move_opponent: isize = 0;

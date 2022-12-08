@@ -76,19 +76,26 @@ pub fn run_1() {
     println!("Answer = {}", total);
 }
 
-fn get_file_size_under(file_system: &FileSystem, current_directory: usize, maximum: usize) -> usize {
+fn get_file_size_under(
+    file_system: &FileSystem,
+    current_directory: usize,
+    maximum: usize,
+) -> usize {
     let mut total: usize = 0;
-    let current = file_system.directory_system.get(&current_directory).unwrap();
-    for (key,value) in &current.children{
+    let current = file_system
+        .directory_system
+        .get(&current_directory)
+        .unwrap();
+    for (key, value) in &current.children {
         total += get_file_size_under(file_system, (*value).clone(), maximum);
     }
-    if current.size < maximum{
+    if current.size < maximum {
         total += current.size;
     }
     return total;
 }
 
-fn get_file_system(all_commands: Vec<String>)-> FileSystem{
+fn get_file_system(all_commands: Vec<String>) -> FileSystem {
     let mut file_system: FileSystem = FileSystem::new();
     let mut current_node = file_system.add_directory(String::from("root"), None);
     for command in all_commands {
@@ -151,7 +158,6 @@ fn get_file_system(all_commands: Vec<String>)-> FileSystem{
             }
         }
     }
-    //println!("{:#?}",file_system);
     return file_system;
 }
 
@@ -168,24 +174,37 @@ pub fn run_2() {
     let all_commands: Vec<String> = utils::read_file_lines("./data/day_7_1.txt");
     let file_system: FileSystem = get_file_system(all_commands);
     let current_directory: usize = 1;
-    let temp_max_size = 30000000 - (70000000 - file_system.directory_system.get(&current_directory).unwrap().size as isize);
-    if temp_max_size > 0{
+    let temp_max_size = 30000000
+        - (70000000
+            - file_system
+                .directory_system
+                .get(&current_directory)
+                .unwrap()
+                .size as isize);
+    if temp_max_size > 0 {
         let max_size = temp_max_size as usize;
         let total = get_small_enough_folder(&file_system, current_directory, max_size);
         println!("Answer = {}", total);
     }
 }
 
-fn get_small_enough_folder(file_system: &FileSystem, current_directory: usize, maximum: usize) -> usize {
+fn get_small_enough_folder(
+    file_system: &FileSystem,
+    current_directory: usize,
+    maximum: usize,
+) -> usize {
     let mut total: usize = 70000000;
-    let current = file_system.directory_system.get(&current_directory).unwrap();
-    for (key,value) in &current.children{
+    let current = file_system
+        .directory_system
+        .get(&current_directory)
+        .unwrap();
+    for (key, value) in &current.children {
         let new_size = get_small_enough_folder(file_system, (*value).clone(), maximum);
-        if new_size > 0 && new_size < total{
+        if new_size > 0 && new_size < total {
             total = new_size.clone();
         }
     }
-    if current.size > maximum && current.size < total{
+    if current.size > maximum && current.size < total {
         total = current.size;
     }
     return total;
