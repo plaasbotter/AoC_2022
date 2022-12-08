@@ -2,6 +2,7 @@ mod utils;
 mod day_1;
 mod day_2;
 mod day_3;
+mod day_4;
 mod day_7;
 mod day_8;
 
@@ -18,6 +19,9 @@ fn main() {
         println!("Day3");
         day_3::run_1();
         day_3::run_2();
+        println!("Day4");
+        day_4::run_1();
+        day_4::run_2();
         println!("Day7");
         day_7::run_1();
         day_7::run_2();
