@@ -61,14 +61,14 @@ pub fn run_2() {
         };
         match play.chars().nth(2) {
             Some(v) => {
-                move_self = (xyz_start + (v as isize));
+                move_self = xyz_start + (v as isize);
             }
             None => {
                 do_calc = false;
             }
         };
         if do_calc == true {
-            total_score += (move_self * 3);
+            total_score += move_self * 3;
             total_score += ((move_opponent + move_self + 1) % 3) + 1
         }
     }

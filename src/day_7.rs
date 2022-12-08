@@ -28,8 +28,8 @@ impl FileSystem {
 
 #[derive(Debug)]
 struct Directory {
-    idx: usize,
-    name: String,
+    _idx: usize,
+    _name: String,
     size: usize,
     parent: Option<usize>,
     children: HashMap<String, usize>,
@@ -39,8 +39,8 @@ struct Directory {
 impl Directory {
     fn new(idx: usize, name: String, parent: Option<usize>) -> Directory {
         return Directory {
-            idx: idx,
-            name: name,
+            _idx: idx,
+            _name: name,
             parent: parent,
             children: HashMap::new(),
             files: HashMap::new(),
@@ -55,15 +55,15 @@ impl Directory {
 
 #[derive(Debug)]
 struct File {
-    file_name: String,
-    file_size: usize,
+    _file_name: String,
+    _file_size: usize,
 }
 
 impl File {
     fn new(file_name: String, file_size: usize) -> File {
         return File {
-            file_name: file_name,
-            file_size: file_size,
+            _file_name: file_name,
+            _file_size: file_size,
         };
     }
 }
@@ -86,7 +86,7 @@ fn get_file_size_under(
         .directory_system
         .get(&current_directory)
         .unwrap();
-    for (key, value) in &current.children {
+    for (_key, value) in &current.children {
         total += get_file_size_under(file_system, (*value).clone(), maximum);
     }
     if current.size < maximum {
@@ -145,7 +145,7 @@ fn get_file_system(all_commands: Vec<String>) -> FileSystem {
                         .children
                         .insert(file_name.clone(), new_file);
                 }
-                val => {
+                _val => {
                     let size: usize = splitted_command[0].parse::<usize>().unwrap();
                     let name: String = splitted_command[1].to_string();
                     file_system
@@ -198,7 +198,7 @@ fn get_small_enough_folder(
         .directory_system
         .get(&current_directory)
         .unwrap();
-    for (key, value) in &current.children {
+    for (_key, value) in &current.children {
         let new_size = get_small_enough_folder(file_system, (*value).clone(), maximum);
         if new_size > 0 && new_size < total {
             total = new_size.clone();
