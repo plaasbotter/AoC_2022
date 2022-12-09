@@ -1,11 +1,7 @@
-use crate::utils;
-
-pub fn run_1() {
-    let all_calories: Vec<String> =
-        utils::read_file_lines("./data/day_1_1.txt");
+pub fn run_1(input: &Vec<String>) {
     let mut total: usize = 0;
     let mut largest: usize = 0;
-    for calorie in all_calories {
+    for calorie in input {
         if calorie.is_empty() {
             reset_total(&mut total, &mut largest);
         } else {
@@ -19,14 +15,12 @@ pub fn run_1() {
     println!("Answer: {}", largest);
 }
 
-pub fn run_2() {
-    let all_calories: Vec<String> =
-        utils::read_file_lines("C:\\Development\\VSCode\\rust\\aventus\\data\\day_1_1.txt");
+pub fn run_2(input: &Vec<String>) {
     let mut total: usize = 0;
     let mut largest_1: usize = 0;
     let mut largest_2: usize = 0;
     let mut largest_3: usize = 0;
-    for calorie in all_calories {
+    for calorie in input {
         if calorie.is_empty() {
             reset_total_top_three(&mut total, &mut largest_1, &mut largest_2, &mut largest_3);
         } else {

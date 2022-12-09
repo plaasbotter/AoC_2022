@@ -1,11 +1,8 @@
-use crate::utils;
-
-pub fn run_1() {
-    let all_trees: Vec<String> = utils::read_file_lines("./data/day_8_1.txt");
-    let columns = all_trees.len() as i32;
-    let rows = all_trees.get(0).unwrap().len() as i32;
+pub fn run_1(input: &Vec<String>) {
+    let columns = input.len() as i32;
+    let rows = input.get(0).unwrap().len() as i32;
     let mut matrix: Vec<Vec<usize>> = vec![];
-    for tree_row in all_trees {
+    for tree_row in input {
         let mut temp_row: Vec<usize> = vec![];
         for char in tree_row.chars() {
             temp_row.push(char as usize);
@@ -70,12 +67,12 @@ pub fn run_1() {
     println!("Answer is {}", counter);
 }
 
-pub fn run_2() {
-    let all_trees: Vec<String> = utils::read_file_lines("./data/day_8_1.txt");
-    let columns = all_trees.len() as i32;
-    let rows = all_trees.get(0).unwrap().len() as i32;
+pub fn run_2(input: &Vec<String>) {
+    //let all_trees: Vec<String> = utils::read_file_lines("./data/day_8_1.txt");
+    let columns = input.len() as i32;
+    let rows = input.get(0).unwrap().len() as i32;
     let mut matrix: Vec<Vec<usize>> = vec![];
-    for tree_row in all_trees {
+    for tree_row in input {
         let mut temp_row: Vec<usize> = vec![];
         for char in tree_row.chars() {
             temp_row.push(char as usize);

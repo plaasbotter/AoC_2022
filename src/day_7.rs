@@ -1,7 +1,5 @@
 use std::collections::HashMap;
 
-use crate::utils;
-
 #[derive(Debug)]
 struct FileSystem {
     //Use atomics for multi threaded
@@ -68,9 +66,8 @@ impl File {
     }
 }
 
-pub fn run_1() {
-    let all_commands: Vec<String> = utils::read_file_lines("./data/day_7_1.txt");
-    let file_system: FileSystem = get_file_system(all_commands);
+pub fn run_1(input: &Vec<String>) {
+    let file_system: FileSystem = get_file_system(input);
     let current_directory: usize = 1;
     let total = get_file_size_under(&file_system, current_directory, 100000 as usize);
     println!("Answer = {}", total);
@@ -95,7 +92,7 @@ fn get_file_size_under(
     return total;
 }
 
-fn get_file_system(all_commands: Vec<String>) -> FileSystem {
+fn get_file_system(all_commands: &Vec<String>) -> FileSystem {
     let mut file_system: FileSystem = FileSystem::new();
     let mut current_node = file_system.add_directory(String::from("root"), None);
     for command in all_commands {
@@ -170,9 +167,8 @@ fn update_file_size(file_system: &mut FileSystem, current_node: &usize, size: &u
     }
 }
 
-pub fn run_2() {
-    let all_commands: Vec<String> = utils::read_file_lines("./data/day_7_1.txt");
-    let file_system: FileSystem = get_file_system(all_commands);
+pub fn run_2(input: &Vec<String>) {
+    let file_system: FileSystem = get_file_system(input);
     let current_directory: usize = 1;
     let temp_max_size = 30000000
         - (70000000

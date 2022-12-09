@@ -1,15 +1,11 @@
-use crate::utils;
-
-pub fn run_1() {
-    let all_plays: Vec<String> =
-        utils::read_file_lines("./data/day_2_1.txt");
+pub fn run_1(input: &Vec<String>) {
     let abc_start: isize = -66;
     let xyz_start: isize = -89;
     let mut move_opponent: isize = 0;
     let mut move_self: isize = 0;
     let mut total_score: isize = 0;
     let mut do_calc: bool;
-    for play in all_plays {
+    for play in input {
         do_calc = true;
         match play.chars().nth(0) {
             Some(v) => {
@@ -40,16 +36,14 @@ pub fn run_1() {
     println!("Answer: {}", total_score);
 }
 
-pub fn run_2() {
-    let all_plays: Vec<String> =
-        utils::read_file_lines("./data/day_2_1.txt");
+pub fn run_2(input: &Vec<String>) {
     let abc_start: isize = -64;
     let xyz_start: isize = -88;
     let mut move_opponent: isize = 0;
     let mut move_self: isize = 0;
     let mut total_score: isize = 0;
     let mut do_calc: bool;
-    for play in all_plays {
+    for play in input {
         do_calc = true;
         match play.chars().nth(0) {
             Some(v) => {
