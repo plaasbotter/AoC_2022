@@ -64,7 +64,7 @@ pub fn run_1(input: &Vec<String>) {
             }
         }
     }
-    println!("Answer is {}", counter);
+    println!("Answer = {}", counter);
 }
 
 pub fn run_2(input: &Vec<String>) {
@@ -128,5 +128,5 @@ pub fn run_2(input: &Vec<String>) {
             }
         }
     }
-    println!("Answer is {}", max_score);
+    println!("Answer = {}", max_score);
 }

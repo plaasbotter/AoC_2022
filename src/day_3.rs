@@ -19,7 +19,7 @@ pub fn run_1(input: &Vec<String>) {
         val_left -= 96;
         total += val_left as usize;
     }
-    println!("Answer {}", total);
+    println!("Answer = {}", total);
 }
 
 pub fn run_2(input: &Vec<String>) {
@@ -59,5 +59,5 @@ pub fn run_2(input: &Vec<String>) {
         total += val_pack_1 as usize;
         current += 3;
     }
-    println!("Answer {}", total);
+    println!("Answer = {}", total);
 }

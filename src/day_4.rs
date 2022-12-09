@@ -11,7 +11,7 @@ pub fn run_1(input: &Vec<String>) {
             counter += 1;
         }
     }
-    println!("Answer is {}", counter);
+    println!("Answer = {}", counter);
 }
 
 pub fn run_2(input: &Vec<String>) {
@@ -29,5 +29,5 @@ pub fn run_2(input: &Vec<String>) {
             counter += 1;
         }
     }
-    println!("Answer is {}", counter);
+    println!("Answer = {}", counter);
 }

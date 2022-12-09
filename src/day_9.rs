@@ -62,7 +62,6 @@ pub fn run_1(input: &Vec<String>) {
                     t.x = h.x;
                 }
             }
-            //println!("{},{},{},{}",Hx,Hy,Tx,Ty);
             map.insert(format!("{},{}", t.x, t.y));
         }
     }

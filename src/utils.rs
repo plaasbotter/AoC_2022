@@ -18,14 +18,14 @@ pub fn read_file_lines(path: impl AsRef<std::path::Path>) -> Vec<String> {
     return return_value;
 }
 
-pub fn create_all_needed_files() {
+pub fn _create_all_needed_files() {
     let paths = fs::read_dir("./data").unwrap();
     let mut all_data: HashSet<String> = HashSet::new();
     for entry in paths {
         let file_name = entry.unwrap().file_name();
         all_data.insert(file_name.to_str().unwrap().to_string());
     }
-    for i in 1..32 {
+    for i in 1..26 {
         for j in 1..3 {
             let temp_data: String = format!("day_{}_{}.txt", i, j);
             if all_data.contains(&temp_data) == false {
@@ -39,7 +39,7 @@ pub fn create_all_needed_files() {
         let file_name = entry.unwrap().file_name();
         all_data.insert(file_name.to_str().unwrap().to_string());
     }
-    for i in 1..32 {
+    for i in 1..26 {
         let temp_data: String = format!("day_{}.rs", i);
         if all_data.contains(&temp_data) == false {
             let mut f = File::create(format!("./src/{}", temp_data)).unwrap();
@@ -49,14 +49,14 @@ pub fn create_all_needed_files() {
     }
 }
 
-pub fn generate_mod_commands() {
-    for i in 1..32 {
+pub fn _generate_mod_commands() {
+    for i in 1..26 {
         println!("//mod day_{};", i);
     }
 }
 
-pub fn generate_run_commands() {
-    for i in 1..32 {
+pub fn _generate_run_commands() {
+    for i in 1..26 {
         println!("//println!(\"Day{}\");", i);
         println!(
             "//let day_{0}_data: Vec<String> = utils::read_file_lines(\"./data/day_{0}_1.txt\");",

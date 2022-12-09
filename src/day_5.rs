@@ -70,8 +70,13 @@ pub fn run_2(input: &Vec<String>) {
             let a = splitted_line[1].parse::<usize>().unwrap();
             let b = splitted_line[3].parse::<usize>().unwrap() - 1;
             let c = splitted_line[5].parse::<usize>().unwrap() - 1;
+            let mut temp_stack: VecDeque<char> = VecDeque::new();
             for _i in 0..a{
                 let temp_box = matrix[b].pop_back().unwrap();
+                temp_stack.push_front(temp_box);
+            }
+            while temp_stack.len() > 0{
+                let temp_box = temp_stack.pop_front().unwrap();
                 matrix[c].push_back(temp_box);
             }
             //println!("{:#?}", matrix);

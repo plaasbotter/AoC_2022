@@ -33,7 +33,7 @@ pub fn run_1(input: &Vec<String>) {
             }
         }
     }
-    println!("Answer: {}", total_score);
+    println!("Answer = {}", total_score);
 }
 
 pub fn run_2(input: &Vec<String>) {
@@ -66,5 +66,5 @@ pub fn run_2(input: &Vec<String>) {
             total_score += ((move_opponent + move_self + 1) % 3) + 1
         }
     }
-    println!("Answer: {}", total_score);
+    println!("Answer = {}", total_score);
 }

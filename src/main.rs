@@ -50,7 +50,7 @@ fn main() {
         day_4::run_2(&day_4_data);
         //
         println!("Day5");
-        let day_5_data: Vec<String> = utils::read_file_lines("./data/day_5_2.txt");
+        let day_5_data: Vec<String> = utils::read_file_lines("./data/day_5_1.txt");
         day_5::run_1(&day_5_data);
         day_5::run_2(&day_5_data);
         //

@@ -12,7 +12,7 @@ pub fn run_1(input: &Vec<String>) {
         }
     }
     reset_total(&mut total, &mut largest);
-    println!("Answer: {}", largest);
+    println!("Answer = {}", largest);
 }
 
 pub fn run_2(input: &Vec<String>) {
@@ -31,7 +31,7 @@ pub fn run_2(input: &Vec<String>) {
         }
     }
     reset_total_top_three(&mut total, &mut largest_1, &mut largest_2, &mut largest_3);
-    println!("Answer: {}", largest_1 + largest_2 + largest_3);
+    println!("Answer = {}", largest_1 + largest_2 + largest_3);
 }
 
 fn reset_total_top_three(
