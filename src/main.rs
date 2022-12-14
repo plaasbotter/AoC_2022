@@ -11,7 +11,7 @@ mod day_10;
 mod day_11;
 mod day_12;
 mod day_13;
-//mod day_14;
+mod day_14;
 //mod day_15;
 //mod day_16;
 //mod day_17;
@@ -94,11 +94,11 @@ fn main() {
         day_13::run_1(&day_13_data);
         day_13::run_2(&day_13_data);
         //
-        //println!("Day14");
-        //let day_14_data: Vec<String> = utils::read_file_lines("./data/day_14_1.txt");
-        //day_14::run_1(&day_14_data);
-        //day_14::run_2(&day_14_data);
-        ////
+        println!("Day14");
+        let day_14_data: Vec<String> = utils::read_file_lines("./data/day_14_1.txt");
+        day_14::run_1(&day_14_data);
+        day_14::run_2(&day_14_data);
+        //
         //println!("Day15");
         //let day_15_data: Vec<String> = utils::read_file_lines("./data/day_15_1.txt");
         //day_15::run_1(&day_15_data);
