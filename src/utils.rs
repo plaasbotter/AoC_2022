@@ -55,6 +55,37 @@ pub fn _generate_mod_commands() {
     }
 }
 
+pub fn _check_size(temp: isize, largest: &mut isize, smallest: &mut isize) {
+    if temp > *largest {
+        *largest = temp;
+    }
+    if temp < *smallest {
+        *smallest = temp;
+    }
+}
+
+pub fn _print_bool_grid(grid: &Vec<Vec<bool>>) {
+    for y in grid {
+        for x in y {
+            if *x == false {
+                print!(".")
+            } else {
+                print!("#");
+            }
+        }
+        println!();
+    }
+}
+
+pub fn _print_u8_grid(grid: &Vec<Vec<u8>>) {
+    for y in grid {
+        for x in y {
+            print!("{}", x);
+        }
+        println!();
+    }
+}
+
 pub fn _generate_run_commands() {
     for i in 1..26 {
         println!("//println!(\"Day{}\");", i);

@@ -31,19 +31,6 @@ pub fn run_1(input: &Vec<String>) {
     println!("Answer = {}", counter);
 }
 
-fn _print_grid(grid: &Vec<Vec<bool>>) {
-    for y in grid {
-        for x in y {
-            if *x == false {
-                print!(".")
-            } else {
-                print!("#");
-            }
-        }
-        println!();
-    }
-}
-
 #[derive(Debug, Clone)]
 struct Coord {
     x: usize,
