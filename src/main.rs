@@ -1,19 +1,19 @@
-mod day_1;
-mod day_2;
-mod day_3;
-mod day_4;
-mod day_5;
-mod day_6;
-mod day_7;
-mod day_8;
-mod day_9;
-mod day_10;
-mod day_11;
-mod day_12;
-mod day_13;
-mod day_14;
-mod day_15;
-//mod day_16;
+//mod day_1;
+//mod day_2;
+//mod day_3;
+//mod day_4;
+//mod day_5;
+//mod day_6;
+//mod day_7;
+//mod day_8;
+//mod day_9;
+//mod day_10;
+//mod day_11;
+//mod day_12;
+//mod day_13;
+//mod day_14;
+//mod day_15;
+mod day_16;
 //mod day_17;
 //mod day_18;
 //mod day_19;
@@ -29,86 +29,86 @@ fn main() {
     use std::time::Instant;
     let now = Instant::now();
     {
-        println!("Day1");
-        let day_1_data: Vec<String> = utils::read_file_lines("./data/day_1_1.txt");
-        day_1::run_1(&day_1_data);
-        day_1::run_2(&day_1_data);
-        //
-        println!("Day2");
-        let day_2_data: Vec<String> = utils::read_file_lines("./data/day_2_1.txt");
-        day_2::run_1(&day_2_data);
-        day_2::run_2(&day_2_data);
-        //
-        println!("Day3");
-        let day_3_data: Vec<String> = utils::read_file_lines("./data/day_3_1.txt");
-        day_3::run_1(&day_3_data);
-        day_3::run_2(&day_3_data);
-        //
-        println!("Day4");
-        let day_4_data: Vec<String> = utils::read_file_lines("./data/day_4_1.txt");
-        day_4::run_1(&day_4_data);
-        day_4::run_2(&day_4_data);
-        //
-        println!("Day5");
-        let day_5_data: Vec<String> = utils::read_file_lines("./data/day_5_1.txt");
-        day_5::run_1(&day_5_data);
-        day_5::run_2(&day_5_data);
-        //
-        println!("Day6");
-        let day_6_data: Vec<String> = utils::read_file_lines("./data/day_6_1.txt");
-        day_6::run_1(&day_6_data);
-        day_6::run_2(&day_6_data);
-        //
-        println!("Day7");
-        let day_7_data: Vec<String> = utils::read_file_lines("./data/day_7_1.txt");
-        day_7::run_1(&day_7_data);
-        day_7::run_2(&day_7_data);
-        //
-        println!("Day8");
-        let day_8_data: Vec<String> = utils::read_file_lines("./data/day_8_1.txt");
-        day_8::run_1(&day_8_data);
-        day_8::run_2(&day_8_data);
-        //
-        println!("Day9");
-        let day_9_data: Vec<String> = utils::read_file_lines("./data/day_9_1.txt");
-        day_9::run_1(&day_9_data);
-        day_9::run_2(&day_9_data);
-        //
-        println!("Day10");
-        let day_10_data: Vec<String> = utils::read_file_lines("./data/day_10_1.txt");
-        day_10::run_1(&day_10_data);
-        day_10::run_2(&day_10_data);
-        //
-        println!("Day11");
-        let day_11_data: Vec<String> = utils::read_file_lines("./data/day_11_1.txt");
-        day_11::run_1(&day_11_data);
-        day_11::run_2(&day_11_data);
-        //
-        println!("Day12");
-        let day_12_data: Vec<String> = utils::read_file_lines("./data/day_12_1.txt");
-        day_12::run_1(&day_12_data);
-        day_12::run_2(&day_12_data);
-        //
-        println!("Day13");
-        let day_13_data: Vec<String> = utils::read_file_lines("./data/day_13_1.txt");
-        day_13::run_1(&day_13_data);
-        day_13::run_2(&day_13_data);
-        //
-        println!("Day14");
-        let day_14_data: Vec<String> = utils::read_file_lines("./data/day_14_1.txt");
-        day_14::run_1(&day_14_data);
-        day_14::run_2(&day_14_data);
-        //
-        println!("Day15");
-        let day_15_data: Vec<String> = utils::read_file_lines("./data/day_15_1.txt");
-        day_15::run_1(&day_15_data);
-        day_15::run_2(&day_15_data);
-        //
-        //println!("Day16");
-        //let day_16_data: Vec<String> = utils::read_file_lines("./data/day_16_1.txt");
-        //day_16::run_1(&day_16_data);
-        //day_16::run_2(&day_16_data);
+        //println!("Day1");
+        //let day_1_data: Vec<String> = utils::read_file_lines("./data/day_1_1.txt");
+        //day_1::run_1(&day_1_data);
+        //day_1::run_2(&day_1_data);
         ////
+        //println!("Day2");
+        //let day_2_data: Vec<String> = utils::read_file_lines("./data/day_2_1.txt");
+        //day_2::run_1(&day_2_data);
+        //day_2::run_2(&day_2_data);
+        ////
+        //println!("Day3");
+        //let day_3_data: Vec<String> = utils::read_file_lines("./data/day_3_1.txt");
+        //day_3::run_1(&day_3_data);
+        //day_3::run_2(&day_3_data);
+        ////
+        //println!("Day4");
+        //let day_4_data: Vec<String> = utils::read_file_lines("./data/day_4_1.txt");
+        //day_4::run_1(&day_4_data);
+        //day_4::run_2(&day_4_data);
+        ////
+        //println!("Day5");
+        //let day_5_data: Vec<String> = utils::read_file_lines("./data/day_5_1.txt");
+        //day_5::run_1(&day_5_data);
+        //day_5::run_2(&day_5_data);
+        ////
+        //println!("Day6");
+        //let day_6_data: Vec<String> = utils::read_file_lines("./data/day_6_1.txt");
+        //day_6::run_1(&day_6_data);
+        //day_6::run_2(&day_6_data);
+        ////
+        //println!("Day7");
+        //let day_7_data: Vec<String> = utils::read_file_lines("./data/day_7_1.txt");
+        //day_7::run_1(&day_7_data);
+        //day_7::run_2(&day_7_data);
+        ////
+        //println!("Day8");
+        //let day_8_data: Vec<String> = utils::read_file_lines("./data/day_8_1.txt");
+        //day_8::run_1(&day_8_data);
+        //day_8::run_2(&day_8_data);
+        ////
+        //println!("Day9");
+        //let day_9_data: Vec<String> = utils::read_file_lines("./data/day_9_1.txt");
+        //day_9::run_1(&day_9_data);
+        //day_9::run_2(&day_9_data);
+        ////
+        //println!("Day10");
+        //let day_10_data: Vec<String> = utils::read_file_lines("./data/day_10_1.txt");
+        //day_10::run_1(&day_10_data);
+        //day_10::run_2(&day_10_data);
+        ////
+        //println!("Day11");
+        //let day_11_data: Vec<String> = utils::read_file_lines("./data/day_11_1.txt");
+        //day_11::run_1(&day_11_data);
+        //day_11::run_2(&day_11_data);
+        ////
+        //println!("Day12");
+        //let day_12_data: Vec<String> = utils::read_file_lines("./data/day_12_1.txt");
+        //day_12::run_1(&day_12_data);
+        //day_12::run_2(&day_12_data);
+        ////
+        //println!("Day13");
+        //let day_13_data: Vec<String> = utils::read_file_lines("./data/day_13_1.txt");
+        //day_13::run_1(&day_13_data);
+        //day_13::run_2(&day_13_data);
+        ////
+        //println!("Day14");
+        //let day_14_data: Vec<String> = utils::read_file_lines("./data/day_14_1.txt");
+        //day_14::run_1(&day_14_data);
+        //day_14::run_2(&day_14_data);
+        ////
+        //println!("Day15");
+        //let day_15_data: Vec<String> = utils::read_file_lines("./data/day_15_1.txt");
+        //day_15::run_1(&day_15_data);
+        //day_15::run_2(&day_15_data);
+        ////
+        println!("Day16");
+        let day_16_data: Vec<String> = utils::read_file_lines("./data/day_16_2.txt");
+        day_16::run_1(&day_16_data);
+        day_16::run_2(&day_16_data);
+        //
         //println!("Day17");
         //let day_17_data: Vec<String> = utils::read_file_lines("./data/day_17_1.txt");
         //day_17::run_1(&day_17_data);
